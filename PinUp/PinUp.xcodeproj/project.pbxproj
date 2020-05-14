@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3572F838246D649400591B88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3572F837246D649400591B88 /* AppDelegate.swift */; };
+		3572F83A246D649400591B88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3572F839246D649400591B88 /* SceneDelegate.swift */; };
+		3572F83C246D649400591B88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3572F83B246D649400591B88 /* ViewController.swift */; };
+		3572F83F246D649400591B88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3572F83D246D649400591B88 /* Main.storyboard */; };
+		3572F842246D649400591B88 /* PinUp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3572F840246D649400591B88 /* PinUp.xcdatamodeld */; };
+		3572F844246D649500591B88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3572F843246D649500591B88 /* Assets.xcassets */; };
+		3572F847246D649500591B88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3572F845246D649500591B88 /* LaunchScreen.storyboard */; };
+		3572F852246D649600591B88 /* PinUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3572F851246D649600591B88 /* PinUpTests.swift */; };
+		526B9F1651F18937504D4CEB /* Pods_PinUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8DADBCE0394BB9AE4D2D9F /* Pods_PinUp.framework */; };
+		70A09677A4FA7FAADF65E321 /* Pods_PinUpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CDB59675B73E3198FEFC23A /* Pods_PinUpTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3572F84E246D649500591B88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3572F82C246D649400591B88 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3572F833246D649400591B88;
+			remoteInfo = PinUp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3572F834246D649400591B88 /* PinUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3572F837246D649400591B88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3572F839246D649400591B88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3572F83B246D649400591B88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3572F83E246D649400591B88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3572F841246D649400591B88 /* PinUp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PinUp.xcdatamodel; sourceTree = "<group>"; };
+		3572F843246D649500591B88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3572F846246D649500591B88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3572F848246D649500591B88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3572F84D246D649500591B88 /* PinUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PinUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3572F851246D649600591B88 /* PinUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinUpTests.swift; sourceTree = "<group>"; };
+		3572F853246D649600591B88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B7687D0D0C0A0169F34508B /* Pods-PinUpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinUpTests.debug.xcconfig"; path = "Target Support Files/Pods-PinUpTests/Pods-PinUpTests.debug.xcconfig"; sourceTree = "<group>"; };
+		73EE5D6C40D473341F54A6F1 /* Pods-PinUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinUp.release.xcconfig"; path = "Target Support Files/Pods-PinUp/Pods-PinUp.release.xcconfig"; sourceTree = "<group>"; };
+		7B9886B73A3A6A1E79111472 /* Pods-PinUpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinUpTests.release.xcconfig"; path = "Target Support Files/Pods-PinUpTests/Pods-PinUpTests.release.xcconfig"; sourceTree = "<group>"; };
+		7CDB59675B73E3198FEFC23A /* Pods_PinUpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinUpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF8DADBCE0394BB9AE4D2D9F /* Pods_PinUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F27AD5EC4A0DC591515F0CF4 /* Pods-PinUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinUp.debug.xcconfig"; path = "Target Support Files/Pods-PinUp/Pods-PinUp.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3572F831246D649400591B88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				526B9F1651F18937504D4CEB /* Pods_PinUp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3572F84A246D649500591B88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70A09677A4FA7FAADF65E321 /* Pods_PinUpTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		25D8A1CDBA9EDC4E0A7EB156 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF8DADBCE0394BB9AE4D2D9F /* Pods_PinUp.framework */,
+				7CDB59675B73E3198FEFC23A /* Pods_PinUpTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		28F759A3057B6BAA1C77FE14 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F27AD5EC4A0DC591515F0CF4 /* Pods-PinUp.debug.xcconfig */,
+				73EE5D6C40D473341F54A6F1 /* Pods-PinUp.release.xcconfig */,
+				3B7687D0D0C0A0169F34508B /* Pods-PinUpTests.debug.xcconfig */,
+				7B9886B73A3A6A1E79111472 /* Pods-PinUpTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3572F82B246D649400591B88 = {
+			isa = PBXGroup;
+			children = (
+				3572F836246D649400591B88 /* PinUp */,
+				3572F850246D649600591B88 /* PinUpTests */,
+				3572F835246D649400591B88 /* Products */,
+				28F759A3057B6BAA1C77FE14 /* Pods */,
+				25D8A1CDBA9EDC4E0A7EB156 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3572F835246D649400591B88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3572F834246D649400591B88 /* PinUp.app */,
+				3572F84D246D649500591B88 /* PinUpTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3572F836246D649400591B88 /* PinUp */ = {
+			isa = PBXGroup;
+			children = (
+				3572F837246D649400591B88 /* AppDelegate.swift */,
+				3572F839246D649400591B88 /* SceneDelegate.swift */,
+				3572F83B246D649400591B88 /* ViewController.swift */,
+				3572F83D246D649400591B88 /* Main.storyboard */,
+				3572F843246D649500591B88 /* Assets.xcassets */,
+				3572F845246D649500591B88 /* LaunchScreen.storyboard */,
+				3572F848246D649500591B88 /* Info.plist */,
+				3572F840246D649400591B88 /* PinUp.xcdatamodeld */,
+			);
+			path = PinUp;
+			sourceTree = "<group>";
+		};
+		3572F850246D649600591B88 /* PinUpTests */ = {
+			isa = PBXGroup;
+			children = (
+				3572F851246D649600591B88 /* PinUpTests.swift */,
+				3572F853246D649600591B88 /* Info.plist */,
+			);
+			path = PinUpTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3572F833246D649400591B88 /* PinUp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3572F856246D649600591B88 /* Build configuration list for PBXNativeTarget "PinUp" */;
+			buildPhases = (
+				6776AA37DBF76ACEB0BBDF59 /* [CP] Check Pods Manifest.lock */,
+				3572F830246D649400591B88 /* Sources */,
+				3572F831246D649400591B88 /* Frameworks */,
+				3572F832246D649400591B88 /* Resources */,
+				286FBA1C6AFA40F0543BAA31 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PinUp;
+			productName = PinUp;
+			productReference = 3572F834246D649400591B88 /* PinUp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3572F84C246D649500591B88 /* PinUpTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3572F859246D649600591B88 /* Build configuration list for PBXNativeTarget "PinUpTests" */;
+			buildPhases = (
+				A81DC79B4F49152A3CE1B15F /* [CP] Check Pods Manifest.lock */,
+				3572F849246D649500591B88 /* Sources */,
+				3572F84A246D649500591B88 /* Frameworks */,
+				3572F84B246D649500591B88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3572F84F246D649500591B88 /* PBXTargetDependency */,
+			);
+			name = PinUpTests;
+			productName = PinUpTests;
+			productReference = 3572F84D246D649500591B88 /* PinUpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3572F82C246D649400591B88 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Shanu Singh";
+				TargetAttributes = {
+					3572F833246D649400591B88 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					3572F84C246D649500591B88 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 3572F833246D649400591B88;
+					};
+				};
+			};
+			buildConfigurationList = 3572F82F246D649400591B88 /* Build configuration list for PBXProject "PinUp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3572F82B246D649400591B88;
+			productRefGroup = 3572F835246D649400591B88 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3572F833246D649400591B88 /* PinUp */,
+				3572F84C246D649500591B88 /* PinUpTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3572F832246D649400591B88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3572F847246D649500591B88 /* LaunchScreen.storyboard in Resources */,
+				3572F844246D649500591B88 /* Assets.xcassets in Resources */,
+				3572F83F246D649400591B88 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3572F84B246D649500591B88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		286FBA1C6AFA40F0543BAA31 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PinUp/Pods-PinUp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PinUp/Pods-PinUp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PinUp/Pods-PinUp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6776AA37DBF76ACEB0BBDF59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PinUp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A81DC79B4F49152A3CE1B15F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PinUpTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3572F830246D649400591B88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3572F83C246D649400591B88 /* ViewController.swift in Sources */,
+				3572F838246D649400591B88 /* AppDelegate.swift in Sources */,
+				3572F842246D649400591B88 /* PinUp.xcdatamodeld in Sources */,
+				3572F83A246D649400591B88 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3572F849246D649500591B88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3572F852246D649600591B88 /* PinUpTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3572F84F246D649500591B88 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3572F833246D649400591B88 /* PinUp */;
+			targetProxy = 3572F84E246D649500591B88 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3572F83D246D649400591B88 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3572F83E246D649400591B88 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3572F845246D649500591B88 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3572F846246D649500591B88 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3572F854246D649600591B88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3572F855246D649600591B88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3572F857246D649600591B88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F27AD5EC4A0DC591515F0CF4 /* Pods-PinUp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PinUp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PinUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3572F858246D649600591B88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73EE5D6C40D473341F54A6F1 /* Pods-PinUp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PinUp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PinUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3572F85A246D649600591B88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B7687D0D0C0A0169F34508B /* Pods-PinUpTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PinUpTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PinUpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PinUp.app/PinUp";
+			};
+			name = Debug;
+		};
+		3572F85B246D649600591B88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B9886B73A3A6A1E79111472 /* Pods-PinUpTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PinUpTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PinUpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PinUp.app/PinUp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3572F82F246D649400591B88 /* Build configuration list for PBXProject "PinUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3572F854246D649600591B88 /* Debug */,
+				3572F855246D649600591B88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3572F856246D649600591B88 /* Build configuration list for PBXNativeTarget "PinUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3572F857246D649600591B88 /* Debug */,
+				3572F858246D649600591B88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3572F859246D649600591B88 /* Build configuration list for PBXNativeTarget "PinUpTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3572F85A246D649600591B88 /* Debug */,
+				3572F85B246D649600591B88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3572F840246D649400591B88 /* PinUp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3572F841246D649400591B88 /* PinUp.xcdatamodel */,
+			);
+			currentVersion = 3572F841246D649400591B88 /* PinUp.xcdatamodel */;
+			path = PinUp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3572F82C246D649400591B88 /* Project object */;
+}
