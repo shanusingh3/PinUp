@@ -71,13 +71,13 @@
         <!--Result List View Controller-->
         <scene sceneID="2w2-yK-aw3">
             <objects>
-                <viewController id="JQR-hX-pLL" customClass="ResultListViewController" customModule="PinUp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="JQR-hX-pLL" customClass="ResultListViewController" customModule="PinUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dAy-Sz-uvy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rmH-zu-fpq">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="116" width="414" height="780"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xSh-vx-89K">
                                     <size key="itemSize" width="206" height="186"/>
@@ -132,10 +132,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="rmH-zu-fpq" firstAttribute="trailing" secondItem="Dl4-mT-d4e" secondAttribute="trailing" id="2jQ-DS-oUo"/>
-                            <constraint firstItem="rmH-zu-fpq" firstAttribute="leading" secondItem="Dl4-mT-d4e" secondAttribute="leading" id="igC-Lf-TqK"/>
-                            <constraint firstItem="rmH-zu-fpq" firstAttribute="top" secondItem="Dl4-mT-d4e" secondAttribute="top" id="r6D-fw-hkS"/>
-                            <constraint firstAttribute="bottom" secondItem="rmH-zu-fpq" secondAttribute="bottom" id="zXb-Wc-Xjy"/>
+                            <constraint firstItem="rmH-zu-fpq" firstAttribute="trailing" secondItem="Dl4-mT-d4e" secondAttribute="trailing" id="3GX-5J-Swu"/>
+                            <constraint firstAttribute="bottom" secondItem="rmH-zu-fpq" secondAttribute="bottom" id="Gtl-jj-jSD"/>
+                            <constraint firstItem="rmH-zu-fpq" firstAttribute="top" secondItem="Dl4-mT-d4e" secondAttribute="top" constant="72" id="MX2-o6-U1W"/>
+                            <constraint firstItem="rmH-zu-fpq" firstAttribute="leading" secondItem="Dl4-mT-d4e" secondAttribute="leading" id="yVM-xp-vyk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dl4-mT-d4e"/>
                     </view>

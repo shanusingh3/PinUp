@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let pixa = PixabayServices()
+        pixa.getImageBy(id: 1130731) { (item, error) in
+            print(item)
+            print(error)
+        }
+        
         return true
     }
 

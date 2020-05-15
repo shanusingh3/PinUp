@@ -8,102 +8,99 @@
 
 import Foundation
 
-
-//struct PixabayServices {
-//
-//
-//    func startFetching(){
-//        let session = URLSession.shared
-//        let url = URL(string: "https://learnappmaking.com/ex/users.json")!
-//
-//        let task = session.dataTask(with: url) { data, response, error in
-//
-//            if error != nil || data == nil {
-//                print("Client error!")
-//                return
-//            }
-//
-//            guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
-//                print("Server error!")
-//                return
-//            }
-//
-//            guard let mime = response.mimeType, mime == "application/json" else {
-//                print("Wrong MIME type!")
-//                return
-//            }
-//
-//            do {
-//                let json = try JSONSerialization.jsonObject(with: data!, options: [])
-//                print(json)
-//            } catch {
-//                print("JSON error: \(error.localizedDescription)")
-//            }
-//        }
-//
-//        task.resume()
-//    }
-//}
-
-
-
-
-import Foundation
-
-enum NetworkResponse:String {
-    case success
-    case authenticationError = "You need to be authenticated first."
-    case badRequest = "Bad request"
-    case outdated = "The url you requested is outdated."
-    case failed = "Network request failed."
-    case noData = "Response returned with no data to decode."
-    case unableToDecode = "We could not decode the response."
-}
-
 enum Result<String>{
     case success
     case failure(String)
 }
 
-struct PixabayServices {
+protocol GetImage {
+    typealias Pixa = ( (_ images: [PixabayModal]?,_ error: String?)->())
+    func getImageBy(name:String, page:Int,completion: @escaping Pixa)
+    func getImageBy(id:Int, completion: @escaping ( (_ images: PixabayModal?,_ error: String?)->())
+    )
+}
+
+struct PixabayServices: GetImage{
     
-    static let PixaAPIKey = ""
-    //let router = Router<MovieApi>()
     
-//    func getImagesByQuery(name: String ,page: Int, completion: @escaping (_ movie: [Movie]?,_ error: String?)->()){
-//
-//        router.request(.newMovies(page: page)) { data, response, error in
-//
-//            if error != nil {
-//                completion(nil, "Please check your network connection.")
-//            }
-//
-//            if let response = response as? HTTPURLResponse {
-//                let result = self.handleNetworkResponse(response)
-//                switch result {
-//                case .success:
-//                    guard let responseData = data else {
-//                        completion(nil, NetworkResponse.noData.rawValue)
-//                        return
-//                    }
-//                    do {
-//                        print(responseData)
-//                        let jsonData = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers)
-//                        print(jsonData)
-//                        let apiResponse = try JSONDecoder().decode(MovieApiResponse.self, from: responseData)
-//                        completion(apiResponse.movies,nil)
-//                    }catch {
-//                        print(error)
-//                        completion(nil, NetworkResponse.unableToDecode.rawValue)
-//                    }
-//                case .failure(let networkFailureError):
-//                    completion(nil, networkFailureError)
-//                }
-//            }
-//        }
-//    }
-//
-    fileprivate func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String>{
+    let router = Router()
+    
+    func getImageBy(name: String, page: Int, completion: @escaping Pixa) {
+        router.request(.nameQuery(byName: name, page: 1)) { (data, response, error) in
+            if error != nil {
+                completion(nil, "Please check your network connection.")
+            }
+            if let response = response as? HTTPURLResponse {
+                let result = self.handleNetworkResponse(response)
+                switch result {
+                case .success:
+                    
+                    var array = [PixabayModal]()
+                    
+                    guard let responseData = data else {
+                        completion(nil, NetworkResponse.noData.rawValue)
+                        return
+                    }
+                    do {
+                        print(responseData)
+                        let jsonData = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers)
+                        print(jsonData)
+                        let apiResponse = try JSONDecoder().decode(PixabayModal.self, from: responseData)
+                        
+                        array.append(apiResponse)
+                        
+                        
+                    }catch {
+                        print(error)
+                        completion(nil, NetworkResponse.unableToDecode.rawValue)
+                    }
+                    
+                    completion(array,nil)
+                    
+                case .failure(let networkFailureError):
+                    completion(nil, networkFailureError)
+                }
+            }
+            
+            
+        }
+    }
+    
+    func getImageBy(id: Int, completion: @escaping ((PixabayModal?, String?) -> ())) {
+        router.request(.idQuery(byId: id)) { (data, response, error) in
+            
+            if error != nil {
+                completion(nil, "Please check your network connection.")
+            }
+            if let response = response as? HTTPURLResponse {
+                let result = self.handleNetworkResponse(response)
+                switch result {
+                case .success:
+                    guard let responseData = data else {
+                        completion(nil, NetworkResponse.noData.rawValue)
+                        return
+                    }
+                    do {
+                        print(responseData)
+                        let jsonData = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers)
+                        print(jsonData)
+                        let apiResponse = try JSONDecoder().decode(PixabayModal.self, from: responseData)
+                        completion(apiResponse,nil)
+                    }catch {
+                        print(error)
+                        completion(nil, NetworkResponse.unableToDecode.rawValue)
+                    }
+                case .failure(let networkFailureError):
+                    completion(nil, networkFailureError)
+                }
+            }
+            
+            
+        }
+    }
+    
+    
+    private func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String>{
         switch response.statusCode {
         case 200...299: return .success
         case 401...500: return .failure(NetworkResponse.authenticationError.rawValue)
@@ -112,4 +109,12 @@ struct PixabayServices {
         default: return .failure(NetworkResponse.failed.rawValue)
         }
     }
+    
+    
 }
+
+
+
+
+
+

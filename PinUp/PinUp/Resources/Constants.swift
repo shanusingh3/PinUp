@@ -11,6 +11,5 @@ import Foundation
 
 struct Constants {
     static let ImageCellIdentifier = "ImageCell"
-    
     static let QueryCellIdentifier = "searchQueryCell"
 }
