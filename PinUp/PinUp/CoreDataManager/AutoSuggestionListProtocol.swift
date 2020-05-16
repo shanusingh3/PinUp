@@ -18,13 +18,13 @@ protocol SaveProtocol {
     func saveLatestSuccessQuery(query: String)
 }
 
-protocol DeleteProtocol {
-    func deleteLastFromList()
-}
+//protocol DeleteProtocol {
+//    func deleteLastFromList()
+//}
 
-protocol CountProtocol {
-    func countTotalItemsInEntity() -> Int?
-}
+//protocol CountProtocol {
+//    func countTotalItemsInEntity() -> Int?
+//}
 
 protocol FetchProtocol {
     func getAllEntries(completion : @escaping (_ list :[String]?) -> ())

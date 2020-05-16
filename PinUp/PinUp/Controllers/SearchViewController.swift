@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import SDWebImage
 
-
+//Show and Hide the TableView
 protocol ShowHideTableViewProtocol {
     func showSuggestionList()
     func hideSuggestionList()
@@ -71,6 +71,7 @@ class SearchViewController: UIViewController{
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         hideSuggestionList()
         
+        //Fetching the suggestion List from the coredata and displaying it in tableview.
         CoreDataManager.shared.getAllEntries { [weak self](suggestionList) in
             if let suggestionList = suggestionList{
                 if suggestionList.count == 0{
@@ -84,13 +85,7 @@ class SearchViewController: UIViewController{
         }
         
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-    }
-    
-    
+      
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constants.ResultControllerSegue{
             if let resultVC = segue.destination as? ResultListViewController{
@@ -98,7 +93,6 @@ class SearchViewController: UIViewController{
             }
         }
     }
-    
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -122,6 +116,7 @@ extension SearchViewController : UISearchBarDelegate{
             self.searchText = text
         }
     }
+    
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
         showSuggestionList()
         return true
@@ -129,6 +124,7 @@ extension SearchViewController : UISearchBarDelegate{
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.text = ""
+        searchBar.becomeFirstResponder()
         showSuggestionList()
     }
 }
@@ -146,6 +142,7 @@ extension SearchViewController : UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //Once the SuggestionList Item Will Get Selected The searchtext variable didSet will send it to the next Controller.
         self.searchText = autoSuggestionArray[indexPath.row]
     }
 }
