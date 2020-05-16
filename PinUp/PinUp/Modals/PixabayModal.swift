@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: - PagesModel
 struct PixabayModal: Codable {
-    let hits: [Hit]
+    var hits: [Hit]
 }
 
 // MARK: - Hit

@@ -29,7 +29,7 @@ extension EndPoint{
             URLQueryItem(name: "q", value: query),
             URLQueryItem(name: "image_type", value: "photo"),
             URLQueryItem(name: "page", value: "\(page)"),
-            URLQueryItem(name: "per_page", value: "\(20)")
+            URLQueryItem(name: "per_page", value: "\(5)")
         ])
     }
     //This function will return the ENDPOINT configure particullary for given ID of the image.

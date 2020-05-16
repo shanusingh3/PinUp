@@ -14,10 +14,9 @@ enum Result<String>{
 }
 
 protocol GetImage {
-    typealias Pixa = ( (_ images: [PixabayModal]?,_ error: String?)->())
+    typealias Pixa = ( (_ images: PixabayModal?,_ error: String?)->())
     func getImageBy(name:String, page:Int,completion: @escaping Pixa)
-    func getImageBy(id:Int, completion: @escaping ( (_ images: PixabayModal?,_ error: String?)->())
-    )
+    func getImageBy(id:Int, completion: @escaping Pixa)
 }
 
 struct PixabayServices: GetImage{
@@ -26,7 +25,7 @@ struct PixabayServices: GetImage{
     let router = Router()
     
     func getImageBy(name: String, page: Int, completion: @escaping Pixa) {
-        router.request(.nameQuery(byName: name, page: 1)) { (data, response, error) in
+        router.request(.nameQuery(byName: name, page: page)) { (data, response, error) in
             if error != nil {
                 completion(nil, "Please check your network connection.")
             }
@@ -34,8 +33,6 @@ struct PixabayServices: GetImage{
                 let result = self.handleNetworkResponse(response)
                 switch result {
                 case .success:
-                    
-                    var array = [PixabayModal]()
                     
                     guard let responseData = data else {
                         completion(nil, NetworkResponse.noData.rawValue)
@@ -45,17 +42,17 @@ struct PixabayServices: GetImage{
                         print(responseData)
                         let jsonData = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers)
                         print(jsonData)
+                        
+                        
                         let apiResponse = try JSONDecoder().decode(PixabayModal.self, from: responseData)
-                        
-                        array.append(apiResponse)
-                        
+                        completion(apiResponse,nil)
                         
                     }catch {
                         print(error)
                         completion(nil, NetworkResponse.unableToDecode.rawValue)
                     }
                     
-                    completion(array,nil)
+                    
                     
                 case .failure(let networkFailureError):
                     completion(nil, networkFailureError)
@@ -66,7 +63,7 @@ struct PixabayServices: GetImage{
         }
     }
     
-    func getImageBy(id: Int, completion: @escaping ((PixabayModal?, String?) -> ())) {
+    func getImageBy(id: Int, completion: @escaping Pixa) {
         router.request(.idQuery(byId: id)) { (data, response, error) in
             
             if error != nil {
