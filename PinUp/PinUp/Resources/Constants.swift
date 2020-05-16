@@ -12,4 +12,6 @@ import Foundation
 struct Constants {
     static let ImageCellIdentifier = "ImageCell"
     static let QueryCellIdentifier = "searchQueryCell"
+    static let ResultControllerSegue = "resultSegue"
+    static let AutoSuggestionEntity = "SuggestionList"
 }

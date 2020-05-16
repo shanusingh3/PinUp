@@ -9,11 +9,24 @@
 import Foundation
 
 
-protocol AutoSuggestionListProtocol{
-    func addNewEntry(name: String)
-    func removeLastEntry()
-    func entryCount() -> Int?
-    func getAllEntries() -> [String]?
+protocol CoreDataErrorProtocol {
+    func showErrorMessage(erroeMessage: String)
 }
 
+//Save Data Protocol could have many save data options like save by id, save by name etc.
+protocol SaveProtocol {
+    func saveLatestSuccessQuery(query: String)
+}
+
+protocol DeleteProtocol {
+    func deleteLastFromList()
+}
+
+protocol CountProtocol {
+    func countTotalItemsInEntity() -> Int?
+}
+
+protocol FetchProtocol {
+    func getAllEntries(completion : @escaping (_ list :[String]?) -> ())
+}
 

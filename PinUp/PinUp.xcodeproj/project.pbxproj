@@ -16,10 +16,11 @@
 		3572F844246D649500591B88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3572F843246D649500591B88 /* Assets.xcassets */; };
 		3572F847246D649500591B88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3572F845246D649500591B88 /* LaunchScreen.storyboard */; };
 		3572F852246D649600591B88 /* PinUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3572F851246D649600591B88 /* PinUpTests.swift */; };
+		3579E0BF2470072900375921 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3579E0BE2470072900375921 /* Extensions.swift */; };
 		3593069D246F0E4F00523A68 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3593069C246F0E4F00523A68 /* EndPoint.swift */; };
 		359D94E2246F29D900E58986 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D94E1246F29D900E58986 /* NetworkResponse.swift */; };
 		359D94E7246F310F00E58986 /* AutoSuggestionListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D94E6246F310F00E58986 /* AutoSuggestionListProtocol.swift */; };
-		359D94E9246F33AD00E58986 /* AutoSuggestionCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D94E8246F33AD00E58986 /* AutoSuggestionCD.swift */; };
+		359D94E9246F33AD00E58986 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D94E8246F33AD00E58986 /* CoreDataManager.swift */; };
 		35A03BFB246E96CA00D4F3D4 /* ResultListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A03BFA246E96CA00D4F3D4 /* ResultListViewController.swift */; };
 		35A03BFD246E986E00D4F3D4 /* SearchQueryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A03BFC246E986E00D4F3D4 /* SearchQueryCell.swift */; };
 		35A03C00246EA48200D4F3D4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A03BFF246EA48200D4F3D4 /* Router.swift */; };
@@ -55,10 +56,11 @@
 		3572F84D246D649500591B88 /* PinUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PinUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3572F851246D649600591B88 /* PinUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinUpTests.swift; sourceTree = "<group>"; };
 		3572F853246D649600591B88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3579E0BE2470072900375921 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3593069C246F0E4F00523A68 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		359D94E1246F29D900E58986 /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
 		359D94E6246F310F00E58986 /* AutoSuggestionListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSuggestionListProtocol.swift; sourceTree = "<group>"; };
-		359D94E8246F33AD00E58986 /* AutoSuggestionCD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSuggestionCD.swift; sourceTree = "<group>"; };
+		359D94E8246F33AD00E58986 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		35A03BFA246E96CA00D4F3D4 /* ResultListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultListViewController.swift; sourceTree = "<group>"; };
 		35A03BFC246E986E00D4F3D4 /* SearchQueryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchQueryCell.swift; sourceTree = "<group>"; };
 		35A03BFF246EA48200D4F3D4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -175,7 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				359D94E6246F310F00E58986 /* AutoSuggestionListProtocol.swift */,
-				359D94E8246F33AD00E58986 /* AutoSuggestionCD.swift */,
+				359D94E8246F33AD00E58986 /* CoreDataManager.swift */,
 			);
 			path = CoreDataManager;
 			sourceTree = "<group>";
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				3537CC4C246DBD88007D5EAC /* Constants.swift */,
+				3579E0BE2470072900375921 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -411,11 +414,12 @@
 				3572F83A246D649400591B88 /* SceneDelegate.swift in Sources */,
 				35A03BFB246E96CA00D4F3D4 /* ResultListViewController.swift in Sources */,
 				35ED22AF246DAE9F00D9C4D3 /* ImageResultCell.swift in Sources */,
-				359D94E9246F33AD00E58986 /* AutoSuggestionCD.swift in Sources */,
+				359D94E9246F33AD00E58986 /* CoreDataManager.swift in Sources */,
 				359D94E2246F29D900E58986 /* NetworkResponse.swift in Sources */,
 				35A03C00246EA48200D4F3D4 /* Router.swift in Sources */,
 				3537CC4F246DBEE1007D5EAC /* PixabayServices.swift in Sources */,
 				359D94E7246F310F00E58986 /* AutoSuggestionListProtocol.swift in Sources */,
+				3579E0BF2470072900375921 /* Extensions.swift in Sources */,
 				35A03C04246EA53C00D4F3D4 /* NetworkLogger.swift in Sources */,
 				3537CC4D246DBD88007D5EAC /* Constants.swift in Sources */,
 			);
